@@ -1,0 +1,47 @@
+{% import "_includes/forms" as forms %}
+
+{{ forms.lightswitchField({
+    label:        "Enable OpenWeather plugin?" | t,
+    id:           'enableGeneral',
+    name:         'enableGeneral',
+    instructions: "Enable OpenWeather plugin to fetch OpenWeather data" | t,
+    errors:       settings.getErrors('enableGeneral'),
+    on:           settings.enableGeneral
+}) }}
+
+{{ forms.textField({
+    label:        "Please fill in your API key from openmaps.org" | t,
+    class:        'required',
+    id:           'openmapsAPIKey',
+    name:         'openmapsAPIKey',
+    instructions: "Register in openmaps.org to get an API key"|t,
+    errors:       settings.getErrors('openmapsAPIKey'),
+    value:        settings.openmapsAPIKey
+}) }}
+
+{{ forms.textField({
+    label:        "Please fill in the refresh interval in minutes" | t,
+    id:           'updateInterval',
+    name:         'updateInterval',
+    instructions: "Determines when a location needs to be updated with the latest data"|t,
+    errors:       settings.getErrors('updateInterval'),
+    value:        settings.updateInterval
+}) }}
+
+{{ forms.textField({
+    label:        "Please fill in the latitude of your default location" | t,
+    id:           'latitude',
+    name:         'latitude',
+    instructions: "Latitude will be used to determine the station for the OpenWeather measurements"|t,
+    errors:       settings.getErrors('latitude'),
+    value:        settings.latitude
+}) }}
+
+{{ forms.textField({
+    label:        "Please fill in the longitude of your default location" | t,
+    id:           'longitude',
+    name:         'longitude',
+    instructions: "Longitude will be used to determine the station for the OpenWeather measurements"|t,
+    errors:       settings.getErrors('longitude'),
+    value:        settings.longitude
+}) }}
