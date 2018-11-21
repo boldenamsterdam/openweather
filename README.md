@@ -10,32 +10,41 @@ This plugin requires Craft CMS 3 or later and an active API key from openWeather
 
 Access the weather information via twig functions or ajax call.
 You can choose between simplified and raw representation of weather data.
-weather data is stored in database and gets updated only when refresh interval has passed in order to save bandwidth.
+Weather data is stored in database and gets updated only when refresh interval has passed in order to save bandwidth and improve performance.
 
 ## Configuration
 
 Fill in the openWeathermap API key to use the plugin.
 Setup the refresh interval (minutes) to setup when weather should be updated.
-Use a default location (latitude, longitude) to get the weather from.
+Use a default location (latitude, longitude) to get the weather.
 
 ## Using
 
-There are two ways to use the plugin. 
+There are two ways to use the plugin, via __twig__ functions and __HTTP__ requests.  
 
-- via twig functions 
-The following function are available:
-`craft.openWeather.simplified(lat, lon)` -> Given a latitude and longitude returns the simplified version of weather
-`craft.openWeather.raw(lat, lon)` -> Given a latitude and longitude returns the raw version of weather
-`craft.openWeather.defaultLocation()` -> Returns the latitude and longitude of the default location setup in the settings plugin
+### Twig functions  
+- `craft.openWeather.simplified(lat, lon)`  
+Given a latitude and longitude returns the simplified version of weather.
+- `craft.openWeather.raw(lat, lon)`  
+Given a latitude and longitude returns the raw version of weather.  
+- `craft.openWeather.defaultLocation()`  
+Returns the latitude and longitude of the default location setup in the settings.
 
-- via http requests
-`/api/openWeather/lat-lon/<latitude>,<latitude>,<label>` -> Given a latitude and longitude returns the simplified version of weather data; optionally pass a label parameter to set a custom label for the given location.
-`/api/openWeather/default` -> Returns the simplified version of weather data of the default location as setup in the settings
+### __HTTP__ requests  
+- `/api/openWeather/lat-lon/<latitude>,<latitude>,<label>`  
+Given a latitude and longitude returns the simplified version of weather data; optionally pass a label parameter to set a custom label for the given location.
+- `/api/openWeather/default`  
+Returns the simplified version of weather data of the default location as setup in the settings.  
+- `/api/openWeather/raw/lat-lon/<latitude>,<latitude>,<label>`  
+Given a latitude and longitude returns the raw version of weather data; optionally pass a label parameter to set a custom label for the given location.  
+- `/api/openWeather/raw/default` -> Returns the raw version of weather data of the default location as setup in the settings
 
-`/api/openWeather/raw/lat-lon/<latitude>,<latitude>,<label>`  -> Given a latitude and longitude returns the raw version of weather data; optionally pass a label parameter to set a custom label for the given location.
-`/api/openWeather/raw/default` -> Returns the raw version of weather data of the default location as setup in the settings
+### Example
 
-Simplified output
+Request  
+GET `/api/openWeather/default`  
+
+Response
 ```json
 {
   "status": "clear",
@@ -60,7 +69,10 @@ Simplified output
 }
 ```
 
-Raw output
+Request  
+GET `/api/openWeather/raw/default`  
+
+Response
 ```json
 {
   "status": "Clear",
