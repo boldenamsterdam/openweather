@@ -11,7 +11,7 @@ This plugin requires Craft CMS 3 or later and an active API key from openWeather
 ## Overview
 
 Access the weather information via TWIG functions or AJAX calls.
-You can choose between simplified and/or raw representation of weather data.
+You can choose between simplified and raw representation of weather data.
 Weather data is stored in your database and only updates when refresh interval has passed in order to save bandwidth and improve performance.
 
 ## Configuration
@@ -39,7 +39,8 @@ Given a latitude and longitude returns the simplified version of weather data; o
 Returns the simplified version of weather data of the default location as setup in the settings.  
 * `/api/openWeather/raw/lat-lon/<latitude>,<latitude>,<label>`  
 Given a latitude and longitude returns the raw version of weather data; optionally pass a label parameter to set a custom label for the given location.  
-* `/api/openWeather/raw/default` -> Returns the raw version of weather data of the default location as setup in the settings
+* `/api/openWeather/raw/default`   
+Returns the raw version of weather data of the default location as setup in the settings
 
 ### Example
 
