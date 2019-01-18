@@ -1,6 +1,6 @@
 {
     "name": "bolden/open-weather",
-    "description": "Craft CMS plugin. Gets OpenWeather info from openOpenWeathermap.org",
+    "description": "Integrate weather information from any location right into your Craft CMS 3 website",
     "type": "craft-plugin",
     "version": "1.0.0",
     "keywords": [
