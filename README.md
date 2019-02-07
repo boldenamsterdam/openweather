@@ -26,11 +26,11 @@ There are two ways to use the plugin, via __twig__ functions and __HTTP__ reques
 
 ### Twig functions  
 * `craft.openWeather.simplified(lat, lon)`  
-Given a latitude and longitude returns the simplified version of weather.
+Given a latitude and longitude returns the simplified version of weather (array).  
 * `craft.openWeather.raw(lat, lon)`  
-Given a latitude and longitude returns the raw version of weather.  
+Given a latitude and longitude returns the raw version of weather (array).   
 * `craft.openWeather.defaultLocation()`  
-Returns the latitude and longitude of the default location setup in the settings.
+Returns the latitude and longitude (as array) of the default location setup in the settings.
 
 ### __HTTP__ requests  
 * `/api/openWeather/lat-lon/<latitude>,<latitude>,<label>`  
