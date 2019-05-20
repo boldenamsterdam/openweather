@@ -2,7 +2,7 @@
     "name": "bolden/open-weather",
     "description": "Integrate weather information from any location right into your Craft CMS 3 website",
     "type": "craft-plugin",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "keywords": [
         "craft",
         "cms",
