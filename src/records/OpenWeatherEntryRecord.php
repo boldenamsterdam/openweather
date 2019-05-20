@@ -44,6 +44,6 @@ class OpenWeatherEntry extends ActiveRecord
      */
     public static function tableName(): string
     {
-        return '{{%open_weather_entries%}}';
+        return '{{%open_weather_entries}}';
     }
 }
