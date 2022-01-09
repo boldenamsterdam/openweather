@@ -1,6 +1,5 @@
+# ⚠️ This plugin is no longer maintained — openWeathermap.org weather plugin for Craft CMS 3.x
 ![Bolden OpenWeather Craft CMS 3 plugin](https://www.bolden.nl/uploads/Bolden-OpenWeather-Craft-CMS-3-plugin.jpg)
-
-# openWeathermap.org weather plugin for Craft CMS 3.x
 
 Integrate weather information from any location right into your Craft CMS 3 website
 
